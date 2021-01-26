@@ -17,19 +17,20 @@ public:
 	virtual ~DBFile();
 	virtual int Create (const char *fpath, fType file_type, void *startup);
 	virtual int Open (const char *fpath);
-	int Close ();
+	virtual int Close ();
 	void Load (Schema &myschema, const char *loadpath);
 	void MoveFirst ();
-	void Add (Record &addme);
+	virtual void Add (Record &addme);
 	int GetNext (Record &fetchme);
 	int GetNext (Record &fetchme, CNF &cnf, Record &literal);
 protected:
-	std::string getTableName(const char* fpath) {
+	std::string parseTableName(const char* fpath) {
 		std::string path(fpath);
 		size_t start = path.find_last_of('/'),
 			end = path.find_last_of('.');
 		return path.substr(start+1, end-start-1);
 	}
+	enum Mode { read, write } mode;
 	Page page;
 	File file;
 private:

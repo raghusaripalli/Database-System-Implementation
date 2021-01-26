@@ -11,3 +11,21 @@
 Heap::Heap() {}
 
 Heap::~Heap() {}
+
+
+int Heap::Close () {
+    printf("HEAP::CLOSE");
+    if (mode == write && !page.is_empty()) 
+        file.addPage(&page);
+    return file.Close();
+}
+
+void Heap::Add (Record& record) {
+    printf("HEAP::ADD");
+    mode = write;
+    if(!page.Append(&record)) {
+        file.addPage(&page);
+        page.EmptyItOut();
+        page.Append(&record);
+    }
+}

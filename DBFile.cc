@@ -31,13 +31,22 @@ int DBFile::Create (const char *f_path, fType f_type, void *startup) {
 }
 
 void DBFile::Load (Schema &f_schema, const char *loadpath) {
+    printf("DBFile::LOAD\n");
+    mode = write;
+    FILE* input_file = fopen(loadpath, "r");
+    FATALIF(input_file==NULL, loadpath);
+    Record nextRecord;
+    page.EmptyItOut();
+    while (nextRecord.SuckNextRecord(&f_schema, input_file)) {
+        Add(nextRecord);
+    }
 }
 
 int DBFile::Open (const char* fpath) {
     printf("DBFile::Open\n");
     FATALIF(db!=NULL, "File already opened.");
     int ftype = heap;
-    ifstream ifs((db->getTableName(fpath)+".meta").c_str());
+    ifstream ifs((db->parseTableName(fpath)+".meta").c_str());
     if (ifs) {
         ifs >> ftype;
         ifs.close();
@@ -50,9 +59,13 @@ void DBFile::MoveFirst () {
 }
 
 int DBFile::Close () {
+    printf("DBFile::Close\n");
+    db->Close();
 }
 
 void DBFile::Add (Record &rec) {
+    printf("DBFile::ADD\n");
+    db->Add(rec);
 }
 
 int DBFile::GetNext (Record &fetchme) {

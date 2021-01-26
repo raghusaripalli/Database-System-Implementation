@@ -42,6 +42,11 @@ public:
 	// empty it out
 	void EmptyItOut ();
 
+	/**
+	 * test if the page is empty
+	 * @return true if the page is empty
+	 */
+	bool is_empty() const { return numRecs==0; }
 };
 
 
@@ -58,6 +63,14 @@ public:
 
 	// returns the current length of the file, in pages
 	off_t GetLength ();
+
+	
+	bool is_empty() const { return curLength==0; }
+	
+	/**
+	 * gets the index of the last page in the file
+	 */
+	off_t lastIndex() const { return curLength-2; }
 
 	// opens the given file; the first parameter tells whether or not to
 	// create the file.  If the parameter is zero, a new file is created
@@ -77,6 +90,23 @@ public:
 	// closes the file and returns the file length (in number of pages)
 	int Close ();
 
+	/**
+	 * gets the last page
+	 * @param putItHere indicates where to put the last page
+	 */
+	void getLastPage(Page* putItHere) {
+		if(is_empty()) putItHere = NULL;
+		else return GetPage(putItHere, lastIndex());
+	}
+
+	/**
+	 * adds one page to the end
+	 * @param addMe the page to add
+	 */
+	void addPage(Page* addMe) {
+		if(is_empty()) AddPage(addMe, 0);
+		else AddPage(addMe, lastIndex()+1);
+	}
 };
 
 

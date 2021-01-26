@@ -7,6 +7,9 @@ class Heap: public DBFile {
 public:
 	Heap();
 	~Heap();
+
+	int Close ();
+	void Add (Record& me);
 };
 
 #endif
