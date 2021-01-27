@@ -31,7 +31,7 @@ int main () {
 	myComparison.Print ();
 
 	// now open up the text file and start procesing it
-        FILE *tableFile = fopen ("../data/lineitem.tbl", "r");
+        FILE *tableFile = fopen ("/home/raghusaripalli/Desktop/P1/data/lineitem.tbl", "r");
 
         Record temp;
         Schema mySchema ("catalog", "lineitem");

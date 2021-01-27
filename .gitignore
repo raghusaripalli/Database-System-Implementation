@@ -2,3 +2,4 @@ data/
 .vscode
 main
 *.bin
+*.txt

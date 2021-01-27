@@ -14,14 +14,14 @@ Heap::~Heap() {}
 
 
 int Heap::Close () {
-    printf("HEAP::CLOSE");
+    printf("HEAP::CLOSE\n");
     if (mode == write && !page.is_empty()) 
         file.addPage(&page);
     return file.Close();
 }
 
 void Heap::Add (Record& record) {
-    printf("HEAP::ADD");
+    printf("HEAP::ADD\n");
     mode = write;
     if(!page.Append(&record)) {
         file.addPage(&page);

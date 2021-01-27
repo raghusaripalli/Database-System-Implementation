@@ -43,19 +43,22 @@ void DBFile::Load (Schema &f_schema, const char *loadpath) {
 }
 
 int DBFile::Open (const char* fpath) {
-    printf("DBFile::Open\n");
+    printf("DBFile::OPEN\n");
     FATALIF(db!=NULL, "File already opened.");
     int ftype = heap;
-    ifstream ifs((db->parseTableName(fpath)+".meta").c_str());
+    ifstream ifs((db->parseTableName(fpath)).c_str());
     if (ifs) {
         ifs >> ftype;
         ifs.close();
     }
     createFile(static_cast<fType>(ftype));
-    return db->Open(fpath);
+    char *fPath = strdup(fpath);
+    file.Open(1, fPath);
+    return 1;
 }
 
 void DBFile::MoveFirst () {
+    printf("DBFile::MoveFirst\n");
 }
 
 int DBFile::Close () {
@@ -69,16 +72,19 @@ void DBFile::Add (Record &rec) {
 }
 
 int DBFile::GetNext (Record &fetchme) {
+    printf("DBFile::GET_NEXT\n");
 }
 
 int DBFile::GetNext (Record &fetchme, CNF &cnf, Record &literal) {
+    printf("DBFile::GET_NEXT__\n");
 }
 
 void DBFile::createFile(fType ftype) {
-  switch (ftype) {
-    case heap: db = new Heap(); break;
-    case sorted: break;
-    default: db = NULL;
-  }
-  FATALIF(db==NULL, "File Type is Invalid.");
+    printf("DBFile::createFILE\n");
+    switch (ftype) {
+        case heap: db = new Heap(); break;
+        case sorted: break;
+        default: db = NULL;
+    }
+    FATALIF(db==NULL, "File Type is Invalid.");
 }
