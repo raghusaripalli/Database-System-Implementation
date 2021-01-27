@@ -11,14 +11,13 @@
 #include <fstream>
 #include <string.h>
 
-DBFile *db;
 
 DBFile::DBFile () {
-
+    db = NULL;
 }
 
 DBFile::~DBFile () {
-
+    delete db;
 }
 
 int DBFile::Create (const char *f_path, fType f_type, void *startup) {
@@ -26,7 +25,7 @@ int DBFile::Create (const char *f_path, fType f_type, void *startup) {
     FATALIF(db!=NULL, "File already opened.");
     createFile(f_type);
     char *fPath = strdup(f_path);
-    file.Open(0, fPath);
+    db->file.Open(0, fPath);
     return 1;
 }
 
@@ -53,7 +52,7 @@ int DBFile::Open (const char* fpath) {
     }
     createFile(static_cast<fType>(ftype));
     char *fPath = strdup(fpath);
-    file.Open(1, fPath);
+    db->file.Open(1, fPath);
     return 1;
 }
 
@@ -67,7 +66,7 @@ int DBFile::Close () {
 }
 
 void DBFile::Add (Record &rec) {
-    printf("DBFile::ADD\n");
+    printf("DBFile::ADD,");
     db->Add(rec);
 }
 

@@ -35,5 +35,6 @@ protected:
 	File file;
 private:
 	void createFile(fType ftype);
+	DBFile *db;
 };
 #endif

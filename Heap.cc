@@ -21,7 +21,7 @@ int Heap::Close () {
 }
 
 void Heap::Add (Record& record) {
-    printf("HEAP::ADD\n");
+    printf("HEAP::ADD,");
     mode = write;
     if(!page.Append(&record)) {
         file.addPage(&page);
