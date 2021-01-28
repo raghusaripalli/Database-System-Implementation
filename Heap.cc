@@ -21,11 +21,23 @@ int Heap::Close () {
 }
 
 void Heap::Add (Record& record) {
-    printf("HEAP::ADD,");
+    //printf("HEAP::ADD,");
     mode = write;
     if(!page.Append(&record)) {
         file.addPage(&page);
         page.EmptyItOut();
         page.Append(&record);
     }
+}
+
+void Heap::MoveFirst() {
+    readMode();
+    file.GetPage(&page, pageIdx=0);
+}
+
+int Heap::GetNext (Record &fetchme, CNF &cnf, Record &literal) {
+    ComparisonEngine comp;
+    while(DBFile::GetNext(fetchme))
+        if(comp.Compare(&fetchme, &literal, &cnf)) return 1;
+    return 0;
 }

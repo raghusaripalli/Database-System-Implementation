@@ -19,10 +19,10 @@ public:
 	virtual int Open (const char *fpath);
 	virtual int Close ();
 	void Load (Schema &myschema, const char *loadpath);
-	void MoveFirst ();
+	virtual void MoveFirst ();
 	virtual void Add (Record &addme);
 	int GetNext (Record &fetchme);
-	int GetNext (Record &fetchme, CNF &cnf, Record &literal);
+	virtual int GetNext (Record &fetchme, CNF &cnf, Record &literal);
 protected:
 	std::string parseTableName(const char* fpath) {
 		std::string path(fpath);
@@ -31,10 +31,10 @@ protected:
 		return path.substr(start+1, end-start-1);
 	}
 	enum Mode { read, write } mode;
+	off_t pageIdx;
 	Page page;
 	File file;
 private:
 	void createFile(fType ftype);
-	DBFile *db;
 };
 #endif

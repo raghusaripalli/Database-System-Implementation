@@ -10,6 +10,19 @@ public:
 
 	int Close ();
 	void Add (Record& me);
+	void MoveFirst();
+	int GetNext (Record &fetchme, CNF &cnf, Record &literal);
+
+protected:
+	void readMode();
 };
+
+inline void Heap::readMode() {
+  	if (mode == read) 
+		return;
+	mode = read;
+  	if (!page.is_empty())
+	  	file.addPage(&page);
+}
 
 #endif

@@ -11,13 +11,14 @@
 #include <fstream>
 #include <string.h>
 
+DBFile *db;
 
 DBFile::DBFile () {
     db = NULL;
 }
 
 DBFile::~DBFile () {
-    delete db;
+
 }
 
 int DBFile::Create (const char *f_path, fType f_type, void *startup) {
@@ -35,7 +36,7 @@ void DBFile::Load (Schema &f_schema, const char *loadpath) {
     FILE* input_file = fopen(loadpath, "r");
     FATALIF(input_file==NULL, loadpath);
     Record nextRecord;
-    page.EmptyItOut();
+    db->page.EmptyItOut();
     while (nextRecord.SuckNextRecord(&f_schema, input_file)) {
         Add(nextRecord);
     }
@@ -58,6 +59,7 @@ int DBFile::Open (const char* fpath) {
 
 void DBFile::MoveFirst () {
     printf("DBFile::MoveFirst\n");
+    db->MoveFirst();
 }
 
 int DBFile::Close () {
@@ -66,16 +68,24 @@ int DBFile::Close () {
 }
 
 void DBFile::Add (Record &rec) {
-    printf("DBFile::ADD,");
+    //printf("DBFile::ADD,");
     db->Add(rec);
 }
 
 int DBFile::GetNext (Record &fetchme) {
-    printf("DBFile::GET_NEXT\n");
+    //printf("DBFile::GET_NEXT\n");
+    while (!db->page.GetFirst(&fetchme)) {
+        if(++db->pageIdx > db->file.lastIndex()) {
+            return 0;
+        }
+        db->file.GetPage(&db->page, db->pageIdx);
+    }
+    return 1;
 }
 
 int DBFile::GetNext (Record &fetchme, CNF &cnf, Record &literal) {
-    printf("DBFile::GET_NEXT__\n");
+    //printf("DBFile::GET_NEXT__\n");
+    return db->GetNext(fetchme, cnf, literal);
 }
 
 void DBFile::createFile(fType ftype) {
