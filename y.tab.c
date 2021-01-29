@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "3.0.2"
+#define YYBISON_VERSION "3.0.4"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -132,7 +132,7 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE YYSTYPE;
+
 union YYSTYPE
 {
 #line 20 "Parser.y" /* yacc.c:355  */
@@ -145,6 +145,8 @@ union YYSTYPE
 
 #line 147 "y.tab.c" /* yacc.c:355  */
 };
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -158,7 +160,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 162 "y.tab.c" /* yacc.c:358  */
+#line 164 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1249,7 +1251,7 @@ yyreduce:
 	(yyval.myAndList)->rightAnd = (yyvsp[0].myAndList);
 
 }
-#line 1253 "y.tab.c" /* yacc.c:1646  */
+#line 1255 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
@@ -1261,7 +1263,7 @@ yyreduce:
 	(yyval.myAndList)->left = (yyvsp[-1].myOrList);
 	(yyval.myAndList)->rightAnd = NULL;
 }
-#line 1265 "y.tab.c" /* yacc.c:1646  */
+#line 1267 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
@@ -1272,7 +1274,7 @@ yyreduce:
 	(yyval.myOrList)->left = (yyvsp[-2].myComparison);
 	(yyval.myOrList)->rightOr = (yyvsp[0].myOrList);
 }
-#line 1276 "y.tab.c" /* yacc.c:1646  */
+#line 1278 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
@@ -1283,7 +1285,7 @@ yyreduce:
 	(yyval.myOrList)->left = (yyvsp[0].myComparison);
 	(yyval.myOrList)->rightOr = NULL;
 }
-#line 1287 "y.tab.c" /* yacc.c:1646  */
+#line 1289 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
@@ -1294,7 +1296,7 @@ yyreduce:
 	(yyval.myComparison)->left = (yyvsp[-2].myOperand);
 	(yyval.myComparison)->right = (yyvsp[0].myOperand);
 }
-#line 1298 "y.tab.c" /* yacc.c:1646  */
+#line 1300 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
@@ -1304,7 +1306,7 @@ yyreduce:
 	(yyval.myComparison) = (struct ComparisonOp *) malloc (sizeof (struct ComparisonOp));
 	(yyval.myComparison)->code = LESS_THAN;
 }
-#line 1308 "y.tab.c" /* yacc.c:1646  */
+#line 1310 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
@@ -1314,7 +1316,7 @@ yyreduce:
 	(yyval.myComparison) = (struct ComparisonOp *) malloc (sizeof (struct ComparisonOp));
 	(yyval.myComparison)->code = GREATER_THAN;
 }
-#line 1318 "y.tab.c" /* yacc.c:1646  */
+#line 1320 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
@@ -1324,7 +1326,7 @@ yyreduce:
 	(yyval.myComparison) = (struct ComparisonOp *) malloc (sizeof (struct ComparisonOp));
 	(yyval.myComparison)->code = EQUALS;
 }
-#line 1328 "y.tab.c" /* yacc.c:1646  */
+#line 1330 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
@@ -1335,7 +1337,7 @@ yyreduce:
 	(yyval.myOperand)->code = STRING;
 	(yyval.myOperand)->value = (yyvsp[0].actualChars);
 }
-#line 1339 "y.tab.c" /* yacc.c:1646  */
+#line 1341 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
@@ -1346,7 +1348,7 @@ yyreduce:
 	(yyval.myOperand)->code = DOUBLE;
 	(yyval.myOperand)->value = (yyvsp[0].actualChars);
 }
-#line 1350 "y.tab.c" /* yacc.c:1646  */
+#line 1352 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
@@ -1357,7 +1359,7 @@ yyreduce:
 	(yyval.myOperand)->code = INT;
 	(yyval.myOperand)->value = (yyvsp[0].actualChars);
 }
-#line 1361 "y.tab.c" /* yacc.c:1646  */
+#line 1363 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
@@ -1368,11 +1370,11 @@ yyreduce:
 	(yyval.myOperand)->code = NAME;
 	(yyval.myOperand)->value = (yyvsp[0].actualChars);
 }
-#line 1372 "y.tab.c" /* yacc.c:1646  */
+#line 1374 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1376 "y.tab.c" /* yacc.c:1646  */
+#line 1378 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

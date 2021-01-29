@@ -1,4 +1,5 @@
 data/
+tpch-dbgen/
 .vscode
 main
 *.bin
