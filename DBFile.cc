@@ -64,7 +64,7 @@ void DBFile::MoveFirst () {
 
 int DBFile::Close () {
     printf("DBFile::Close\n");
-    db->Close();
+    return db->Close();
 }
 
 void DBFile::Add (Record &rec) {

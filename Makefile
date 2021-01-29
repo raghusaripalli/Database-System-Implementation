@@ -1,10 +1,6 @@
 CC = g++ -O2 -Wno-deprecated 
 
-tag = -i
-
-ifdef linux
 tag = -n
-endif
 
 all: main test.out
 
