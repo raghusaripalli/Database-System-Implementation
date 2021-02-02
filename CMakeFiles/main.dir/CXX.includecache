@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/raghusaripalli/Desktop/DBI/Comparison.cc
-stdio.h
--
-iostream
--
-stdlib.h
--
-string.h
--
-Comparison.h
-/home/raghusaripalli/Desktop/DBI/Comparison.h
-
 /home/raghusaripalli/Desktop/DBI/Comparison.h
 Record.h
 /home/raghusaripalli/Desktop/DBI/Record.h
@@ -29,18 +17,6 @@ Comparison.h
 /home/raghusaripalli/Desktop/DBI/Comparison.h
 ComparisonEngine.h
 /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
-
-/home/raghusaripalli/Desktop/DBI/ComparisonEngine.cc
-ComparisonEngine.h
-/home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
-Comparison.h
-/home/raghusaripalli/Desktop/DBI/Comparison.h
-string.h
--
-stdlib.h
--
-iostream
--
 
 /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
 Record.h
@@ -106,26 +82,6 @@ stdlib.h
 assert.h
 -
 
-/home/raghusaripalli/Desktop/DBI/File.cc
-File.h
-/home/raghusaripalli/Desktop/DBI/File.h
-TwoWayList.cc
-/home/raghusaripalli/Desktop/DBI/TwoWayList.cc
-sys/types.h
--
-sys/stat.h
--
-unistd.h
--
-fcntl.h
--
-string.h
--
-iostream
--
-stdlib.h
--
-
 /home/raghusaripalli/Desktop/DBI/File.h
 TwoWayList.h
 /home/raghusaripalli/Desktop/DBI/TwoWayList.h
@@ -137,24 +93,6 @@ Comparison.h
 /home/raghusaripalli/Desktop/DBI/Comparison.h
 ComparisonEngine.h
 /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
-
-/home/raghusaripalli/Desktop/DBI/Heap.cc
-Record.h
-/home/raghusaripalli/Desktop/DBI/Record.h
-Schema.h
-/home/raghusaripalli/Desktop/DBI/Schema.h
-File.h
-/home/raghusaripalli/Desktop/DBI/File.h
-Comparison.h
-/home/raghusaripalli/Desktop/DBI/Comparison.h
-ComparisonEngine.h
-/home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
-Defs.h
-/home/raghusaripalli/Desktop/DBI/Defs.h
-Errors.h
-/home/raghusaripalli/Desktop/DBI/Errors.h
-Heap.h
-/home/raghusaripalli/Desktop/DBI/Heap.h
 
 /home/raghusaripalli/Desktop/DBI/Heap.h
 DBFile.h
@@ -162,18 +100,6 @@ DBFile.h
 
 /home/raghusaripalli/Desktop/DBI/ParseTree.h
 
-/home/raghusaripalli/Desktop/DBI/Record.cc
-Record.h
-/home/raghusaripalli/Desktop/DBI/Record.h
-string.h
--
-stdio.h
--
-stdlib.h
--
-iostream
--
-
 /home/raghusaripalli/Desktop/DBI/Record.h
 stdio.h
 -
@@ -198,18 +124,6 @@ Comparison.h
 ComparisonEngine.h
 /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
 
-/home/raghusaripalli/Desktop/DBI/Schema.cc
-Schema.h
-/home/raghusaripalli/Desktop/DBI/Schema.h
-string.h
--
-stdio.h
--
-stdlib.h
--
-iostream
--
-
 /home/raghusaripalli/Desktop/DBI/Schema.h
 stdio.h
 -
@@ -224,47 +138,5 @@ Comparison.h
 ComparisonEngine.h
 /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
 
-/home/raghusaripalli/Desktop/DBI/TwoWayList.cc
-TwoWayList.h
 /home/raghusaripalli/Desktop/DBI/TwoWayList.h
-iostream
--
-stdlib.h
--
-
-/home/raghusaripalli/Desktop/DBI/TwoWayList.h
-
-/home/raghusaripalli/Desktop/DBI/main.cc
-iostream
--
-Record.h
-/home/raghusaripalli/Desktop/DBI/Record.h
-stdlib.h
--
-
-/home/raghusaripalli/Desktop/DBI/parser.cc
-ParseTree.h
-/home/raghusaripalli/Desktop/DBI/ParseTree.h
-stdio.h
--
-string.h
--
-stdlib.h
--
-iostream
--
-stddef.h
--
-libintl.h
--
-alloca.h
--
-malloc.h
--
-stdlib.h
--
-stdlib.h
--
-stdio.h
--
 

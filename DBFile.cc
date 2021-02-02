@@ -22,7 +22,10 @@ DBFile::~DBFile () {
 }
 
 int DBFile::Create (const char *f_path, fType f_type, void *startup) {
-    
+    // If f_path is NULL
+    if (f_path == NULL) {
+        return 0;
+    }
     // throw error if file is already opened
     FATALIF(db!=NULL, "File already opened.");
     
@@ -38,6 +41,10 @@ int DBFile::Create (const char *f_path, fType f_type, void *startup) {
 }
 
 void DBFile::Load (Schema &f_schema, const char *loadpath) {
+    
+    // throw error if loadpath is null
+    FATALIF(loadpath==NULL, "File already opened.");
+    
     // change to write mode
     mode = write;
 
@@ -59,6 +66,11 @@ void DBFile::Load (Schema &f_schema, const char *loadpath) {
 }
 
 int DBFile::Open (const char* fpath) {
+    // If f_path is NULL
+    if (fpath == NULL) {
+        return 0;
+    }
+
     // throw error if file is already opened
     FATALIF(db!=NULL, "File already opened.");
 
