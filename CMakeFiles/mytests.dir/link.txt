@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/mytests.dir/myTests.cc.o -o mytests  -Wl,-rpath,/home/raghusaripalli/Desktop/DBI/gtest gtest/libgtest.so -lpthread 

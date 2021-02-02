@@ -1,0 +1,9 @@
+/home/raghusaripalli/Desktop/DBI/CMakeFiles/rebuild_cache.dir
+/home/raghusaripalli/Desktop/DBI/CMakeFiles/main.dir
+/home/raghusaripalli/Desktop/DBI/CMakeFiles/gTests.dir
+/home/raghusaripalli/Desktop/DBI/CMakeFiles/edit_cache.dir
+/home/raghusaripalli/Desktop/DBI/CMakeFiles/test.out.dir
+/home/raghusaripalli/Desktop/DBI/gtest/CMakeFiles/rebuild_cache.dir
+/home/raghusaripalli/Desktop/DBI/gtest/CMakeFiles/edit_cache.dir
+/home/raghusaripalli/Desktop/DBI/gtest/CMakeFiles/gtest_main.dir
+/home/raghusaripalli/Desktop/DBI/gtest/CMakeFiles/gtest.dir

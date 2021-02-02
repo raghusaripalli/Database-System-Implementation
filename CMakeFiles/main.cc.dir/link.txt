@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.cc.dir/Schema.cc.o CMakeFiles/main.cc.dir/Record.cc.o CMakeFiles/main.cc.dir/Comparison.cc.o CMakeFiles/main.cc.dir/ComparisonEngine.cc.o CMakeFiles/main.cc.dir/File.cc.o CMakeFiles/main.cc.dir/DBFile.cc.o CMakeFiles/main.cc.dir/Heap.cc.o CMakeFiles/main.cc.dir/parser.cc.o CMakeFiles/main.cc.dir/lex.yy.c.o -o main.cc 
