@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/raghusaripalli/Desktop/DBI/ParseTree.h
+
+/home/raghusaripalli/Desktop/DBI/lex.yy.c
+stdio.h
+-
+string.h
+-
+errno.h
+-
+stdlib.h
+-
+inttypes.h
+-
+string.h
+-
+stdlib.h
+-
+ParseTree.h
+/home/raghusaripalli/Desktop/DBI/ParseTree.h
+y.tab.h
+/home/raghusaripalli/Desktop/DBI/y.tab.h
+unistd.h
+-
+
+/home/raghusaripalli/Desktop/DBI/y.tab.h
+
