@@ -2,6 +2,25 @@
 ===============
 ### Database System Implementation
 
-By **Raghuveer Sharma Saripalli**(50946752) and **Madhuri Uppu**(43029778)
+**Members:**
 
-{rsaripalli,madhuri.uppu}@ufl.edu
+Raghuveer Sharma Saripalli(UFID : 50946752)
+Madhuri Uppu(UFID : 43029778)
+
+**Objective:** The goal of this project is to implement Heap File Database Implementation in part 1.
+
+**Running the project:**
+1.	Clone data generator from GitHub and compile it to generate 10MB TPCH data.
+2.	Update the table path in test.cc and main.cc.
+3.	Open the terminal in project folder and run the below commands :
+    o	make clean
+    o	make
+    o	./test.out
+
+
+**Functionalities implemented:**
+
+1. Create a file
+2. Load the TPCH data file into heap file.
+3. Scan the heap file against CNF and fetch the records.
+4. Implemented GTests for DBFile methods.
