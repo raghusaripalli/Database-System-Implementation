@@ -204,9 +204,35 @@ CMakeFiles/gTests.dir/TwoWayList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gTests.dir/TwoWayList.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/TwoWayList.cc -o CMakeFiles/gTests.dir/TwoWayList.cc.s
 
+CMakeFiles/gTests.dir/Pipe.cc.o: CMakeFiles/gTests.dir/flags.make
+CMakeFiles/gTests.dir/Pipe.cc.o: Pipe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/gTests.dir/Pipe.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gTests.dir/Pipe.cc.o -c /home/raghusaripalli/Desktop/DBI/Pipe.cc
+
+CMakeFiles/gTests.dir/Pipe.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gTests.dir/Pipe.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raghusaripalli/Desktop/DBI/Pipe.cc > CMakeFiles/gTests.dir/Pipe.cc.i
+
+CMakeFiles/gTests.dir/Pipe.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gTests.dir/Pipe.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/Pipe.cc -o CMakeFiles/gTests.dir/Pipe.cc.s
+
+CMakeFiles/gTests.dir/BigQ.cc.o: CMakeFiles/gTests.dir/flags.make
+CMakeFiles/gTests.dir/BigQ.cc.o: BigQ.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/gTests.dir/BigQ.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gTests.dir/BigQ.cc.o -c /home/raghusaripalli/Desktop/DBI/BigQ.cc
+
+CMakeFiles/gTests.dir/BigQ.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gTests.dir/BigQ.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raghusaripalli/Desktop/DBI/BigQ.cc > CMakeFiles/gTests.dir/BigQ.cc.i
+
+CMakeFiles/gTests.dir/BigQ.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gTests.dir/BigQ.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/BigQ.cc -o CMakeFiles/gTests.dir/BigQ.cc.s
+
 CMakeFiles/gTests.dir/parser.cc.o: CMakeFiles/gTests.dir/flags.make
 CMakeFiles/gTests.dir/parser.cc.o: parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/gTests.dir/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/gTests.dir/parser.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gTests.dir/parser.cc.o -c /home/raghusaripalli/Desktop/DBI/parser.cc
 
 CMakeFiles/gTests.dir/parser.cc.i: cmake_force
@@ -220,7 +246,7 @@ CMakeFiles/gTests.dir/parser.cc.s: cmake_force
 CMakeFiles/gTests.dir/lex.yy.c.o: CMakeFiles/gTests.dir/flags.make
 CMakeFiles/gTests.dir/lex.yy.c.o: lex.yy.c
 CMakeFiles/gTests.dir/lex.yy.c.o: parser.hh
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/gTests.dir/lex.yy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/gTests.dir/lex.yy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gTests.dir/lex.yy.c.o -c /home/raghusaripalli/Desktop/DBI/lex.yy.c
 
 CMakeFiles/gTests.dir/lex.yy.c.i: cmake_force
@@ -242,6 +268,8 @@ gTests_OBJECTS = \
 "CMakeFiles/gTests.dir/Comparison.cc.o" \
 "CMakeFiles/gTests.dir/ComparisonEngine.cc.o" \
 "CMakeFiles/gTests.dir/TwoWayList.cc.o" \
+"CMakeFiles/gTests.dir/Pipe.cc.o" \
+"CMakeFiles/gTests.dir/BigQ.cc.o" \
 "CMakeFiles/gTests.dir/parser.cc.o" \
 "CMakeFiles/gTests.dir/lex.yy.c.o"
 
@@ -257,12 +285,14 @@ gTests: CMakeFiles/gTests.dir/Schema.cc.o
 gTests: CMakeFiles/gTests.dir/Comparison.cc.o
 gTests: CMakeFiles/gTests.dir/ComparisonEngine.cc.o
 gTests: CMakeFiles/gTests.dir/TwoWayList.cc.o
+gTests: CMakeFiles/gTests.dir/Pipe.cc.o
+gTests: CMakeFiles/gTests.dir/BigQ.cc.o
 gTests: CMakeFiles/gTests.dir/parser.cc.o
 gTests: CMakeFiles/gTests.dir/lex.yy.c.o
 gTests: CMakeFiles/gTests.dir/build.make
-gTests: gtest/libgtest.so
+gTests: gtest/libgtest.a
 gTests: CMakeFiles/gTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable gTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable gTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

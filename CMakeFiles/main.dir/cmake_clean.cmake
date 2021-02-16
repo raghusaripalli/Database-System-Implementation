@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/BigQ.cc.o"
   "CMakeFiles/main.dir/Comparison.cc.o"
   "CMakeFiles/main.dir/ComparisonEngine.cc.o"
   "CMakeFiles/main.dir/DBFile.cc.o"
   "CMakeFiles/main.dir/File.cc.o"
   "CMakeFiles/main.dir/Heap.cc.o"
+  "CMakeFiles/main.dir/Pipe.cc.o"
   "CMakeFiles/main.dir/Record.cc.o"
   "CMakeFiles/main.dir/Schema.cc.o"
   "CMakeFiles/main.dir/TwoWayList.cc.o"

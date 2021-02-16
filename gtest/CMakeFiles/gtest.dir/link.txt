@@ -1,1 +1,2 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o   -L/home/raghusaripalli/Desktop/DBI/gtest/src  -Wl,-rpath,/home/raghusaripalli/Desktop/DBI/gtest/src -lpthread 
+/usr/bin/ar qc libgtest.a CMakeFiles/gtest.dir/src/gtest-all.cc.o
+/usr/bin/ranlib libgtest.a

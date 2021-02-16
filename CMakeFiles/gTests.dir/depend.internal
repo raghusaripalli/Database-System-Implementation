@@ -5,6 +5,18 @@ CMakeFiles/gTests.dir/lex.yy.c.o
  /home/raghusaripalli/Desktop/DBI/ParseTree.h
  /home/raghusaripalli/Desktop/DBI/lex.yy.c
  /home/raghusaripalli/Desktop/DBI/y.tab.h
+CMakeFiles/gTests.dir/BigQ.cc.o
+ /home/raghusaripalli/Desktop/DBI/BigQ.cc
+ /home/raghusaripalli/Desktop/DBI/BigQ.h
+ /home/raghusaripalli/Desktop/DBI/Comparison.h
+ /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
+ /home/raghusaripalli/Desktop/DBI/Defs.h
+ /home/raghusaripalli/Desktop/DBI/File.h
+ /home/raghusaripalli/Desktop/DBI/ParseTree.h
+ /home/raghusaripalli/Desktop/DBI/Pipe.h
+ /home/raghusaripalli/Desktop/DBI/Record.h
+ /home/raghusaripalli/Desktop/DBI/Schema.h
+ /home/raghusaripalli/Desktop/DBI/TwoWayList.h
 CMakeFiles/gTests.dir/Comparison.cc.o
  /home/raghusaripalli/Desktop/DBI/Comparison.cc
  /home/raghusaripalli/Desktop/DBI/Comparison.h
@@ -59,6 +71,17 @@ CMakeFiles/gTests.dir/Heap.cc.o
  /home/raghusaripalli/Desktop/DBI/Heap.cc
  /home/raghusaripalli/Desktop/DBI/Heap.h
  /home/raghusaripalli/Desktop/DBI/ParseTree.h
+ /home/raghusaripalli/Desktop/DBI/Record.h
+ /home/raghusaripalli/Desktop/DBI/Schema.h
+ /home/raghusaripalli/Desktop/DBI/TwoWayList.h
+CMakeFiles/gTests.dir/Pipe.cc.o
+ /home/raghusaripalli/Desktop/DBI/Comparison.h
+ /home/raghusaripalli/Desktop/DBI/ComparisonEngine.h
+ /home/raghusaripalli/Desktop/DBI/Defs.h
+ /home/raghusaripalli/Desktop/DBI/File.h
+ /home/raghusaripalli/Desktop/DBI/ParseTree.h
+ /home/raghusaripalli/Desktop/DBI/Pipe.cc
+ /home/raghusaripalli/Desktop/DBI/Pipe.h
  /home/raghusaripalli/Desktop/DBI/Record.h
  /home/raghusaripalli/Desktop/DBI/Schema.h
  /home/raghusaripalli/Desktop/DBI/TwoWayList.h

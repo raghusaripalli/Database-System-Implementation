@@ -204,9 +204,35 @@ CMakeFiles/main.dir/TwoWayList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/TwoWayList.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/TwoWayList.cc -o CMakeFiles/main.dir/TwoWayList.cc.s
 
+CMakeFiles/main.dir/Pipe.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Pipe.cc.o: Pipe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/Pipe.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Pipe.cc.o -c /home/raghusaripalli/Desktop/DBI/Pipe.cc
+
+CMakeFiles/main.dir/Pipe.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Pipe.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raghusaripalli/Desktop/DBI/Pipe.cc > CMakeFiles/main.dir/Pipe.cc.i
+
+CMakeFiles/main.dir/Pipe.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Pipe.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/Pipe.cc -o CMakeFiles/main.dir/Pipe.cc.s
+
+CMakeFiles/main.dir/BigQ.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/BigQ.cc.o: BigQ.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/BigQ.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/BigQ.cc.o -c /home/raghusaripalli/Desktop/DBI/BigQ.cc
+
+CMakeFiles/main.dir/BigQ.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/BigQ.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/raghusaripalli/Desktop/DBI/BigQ.cc > CMakeFiles/main.dir/BigQ.cc.i
+
+CMakeFiles/main.dir/BigQ.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/BigQ.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/raghusaripalli/Desktop/DBI/BigQ.cc -o CMakeFiles/main.dir/BigQ.cc.s
+
 CMakeFiles/main.dir/parser.cc.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/parser.cc.o: parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/parser.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/parser.cc.o -c /home/raghusaripalli/Desktop/DBI/parser.cc
 
 CMakeFiles/main.dir/parser.cc.i: cmake_force
@@ -220,7 +246,7 @@ CMakeFiles/main.dir/parser.cc.s: cmake_force
 CMakeFiles/main.dir/lex.yy.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/lex.yy.c.o: lex.yy.c
 CMakeFiles/main.dir/lex.yy.c.o: parser.hh
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/main.dir/lex.yy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/main.dir/lex.yy.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/lex.yy.c.o -c /home/raghusaripalli/Desktop/DBI/lex.yy.c
 
 CMakeFiles/main.dir/lex.yy.c.i: cmake_force
@@ -242,6 +268,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/Comparison.cc.o" \
 "CMakeFiles/main.dir/ComparisonEngine.cc.o" \
 "CMakeFiles/main.dir/TwoWayList.cc.o" \
+"CMakeFiles/main.dir/Pipe.cc.o" \
+"CMakeFiles/main.dir/BigQ.cc.o" \
 "CMakeFiles/main.dir/parser.cc.o" \
 "CMakeFiles/main.dir/lex.yy.c.o"
 
@@ -257,11 +285,13 @@ main: CMakeFiles/main.dir/Schema.cc.o
 main: CMakeFiles/main.dir/Comparison.cc.o
 main: CMakeFiles/main.dir/ComparisonEngine.cc.o
 main: CMakeFiles/main.dir/TwoWayList.cc.o
+main: CMakeFiles/main.dir/Pipe.cc.o
+main: CMakeFiles/main.dir/BigQ.cc.o
 main: CMakeFiles/main.dir/parser.cc.o
 main: CMakeFiles/main.dir/lex.yy.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raghusaripalli/Desktop/DBI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

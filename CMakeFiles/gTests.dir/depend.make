@@ -5,6 +5,18 @@ CMakeFiles/gTests.dir/lex.yy.c.o: ParseTree.h
 CMakeFiles/gTests.dir/lex.yy.c.o: lex.yy.c
 CMakeFiles/gTests.dir/lex.yy.c.o: y.tab.h
 
+CMakeFiles/gTests.dir/BigQ.cc.o: BigQ.cc
+CMakeFiles/gTests.dir/BigQ.cc.o: BigQ.h
+CMakeFiles/gTests.dir/BigQ.cc.o: Comparison.h
+CMakeFiles/gTests.dir/BigQ.cc.o: ComparisonEngine.h
+CMakeFiles/gTests.dir/BigQ.cc.o: Defs.h
+CMakeFiles/gTests.dir/BigQ.cc.o: File.h
+CMakeFiles/gTests.dir/BigQ.cc.o: ParseTree.h
+CMakeFiles/gTests.dir/BigQ.cc.o: Pipe.h
+CMakeFiles/gTests.dir/BigQ.cc.o: Record.h
+CMakeFiles/gTests.dir/BigQ.cc.o: Schema.h
+CMakeFiles/gTests.dir/BigQ.cc.o: TwoWayList.h
+
 CMakeFiles/gTests.dir/Comparison.cc.o: Comparison.cc
 CMakeFiles/gTests.dir/Comparison.cc.o: Comparison.h
 CMakeFiles/gTests.dir/Comparison.cc.o: ComparisonEngine.h
@@ -61,6 +73,17 @@ CMakeFiles/gTests.dir/Heap.cc.o: ParseTree.h
 CMakeFiles/gTests.dir/Heap.cc.o: Record.h
 CMakeFiles/gTests.dir/Heap.cc.o: Schema.h
 CMakeFiles/gTests.dir/Heap.cc.o: TwoWayList.h
+
+CMakeFiles/gTests.dir/Pipe.cc.o: Comparison.h
+CMakeFiles/gTests.dir/Pipe.cc.o: ComparisonEngine.h
+CMakeFiles/gTests.dir/Pipe.cc.o: Defs.h
+CMakeFiles/gTests.dir/Pipe.cc.o: File.h
+CMakeFiles/gTests.dir/Pipe.cc.o: ParseTree.h
+CMakeFiles/gTests.dir/Pipe.cc.o: Pipe.cc
+CMakeFiles/gTests.dir/Pipe.cc.o: Pipe.h
+CMakeFiles/gTests.dir/Pipe.cc.o: Record.h
+CMakeFiles/gTests.dir/Pipe.cc.o: Schema.h
+CMakeFiles/gTests.dir/Pipe.cc.o: TwoWayList.h
 
 CMakeFiles/gTests.dir/Record.cc.o: Comparison.h
 CMakeFiles/gTests.dir/Record.cc.o: ComparisonEngine.h

@@ -194,6 +194,39 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+BigQ.o: BigQ.cc.o
+
+.PHONY : BigQ.o
+
+# target to build an object file
+BigQ.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BigQ.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/BigQ.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/BigQ.cc.o
+.PHONY : BigQ.cc.o
+
+BigQ.i: BigQ.cc.i
+
+.PHONY : BigQ.i
+
+# target to preprocess a source file
+BigQ.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BigQ.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/BigQ.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/BigQ.cc.i
+.PHONY : BigQ.cc.i
+
+BigQ.s: BigQ.cc.s
+
+.PHONY : BigQ.s
+
+# target to generate assembly for a file
+BigQ.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/BigQ.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/BigQ.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/BigQ.cc.s
+.PHONY : BigQ.cc.s
+
 Comparison.o: Comparison.cc.o
 
 .PHONY : Comparison.o
@@ -358,6 +391,39 @@ Heap.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/Heap.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/Heap.cc.s
 .PHONY : Heap.cc.s
+
+Pipe.o: Pipe.cc.o
+
+.PHONY : Pipe.o
+
+# target to build an object file
+Pipe.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pipe.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/Pipe.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/Pipe.cc.o
+.PHONY : Pipe.cc.o
+
+Pipe.i: Pipe.cc.i
+
+.PHONY : Pipe.i
+
+# target to preprocess a source file
+Pipe.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pipe.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/Pipe.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/Pipe.cc.i
+.PHONY : Pipe.cc.i
+
+Pipe.s: Pipe.cc.s
+
+.PHONY : Pipe.s
+
+# target to generate assembly for a file
+Pipe.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pipe.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gTests.dir/build.make CMakeFiles/gTests.dir/Pipe.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/Pipe.cc.s
+.PHONY : Pipe.cc.s
 
 Record.o: Record.cc.o
 
@@ -618,6 +684,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... main"
 	@echo "... test.out"
+	@echo "... BigQ.o"
+	@echo "... BigQ.i"
+	@echo "... BigQ.s"
 	@echo "... Comparison.o"
 	@echo "... Comparison.i"
 	@echo "... Comparison.s"
@@ -633,6 +702,9 @@ help:
 	@echo "... Heap.o"
 	@echo "... Heap.i"
 	@echo "... Heap.s"
+	@echo "... Pipe.o"
+	@echo "... Pipe.i"
+	@echo "... Pipe.s"
 	@echo "... Record.o"
 	@echo "... Record.i"
 	@echo "... Record.s"

@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/raghusaripalli/Desktop/DBI -I/home/raghusaripalli/Desktop/DBI/gtest/include
 
-C_FLAGS = 
+C_FLAGS = -pthread
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/home/raghusaripalli/Desktop/DBI -I/home/raghusaripalli/Desktop/DBI/gtest/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -pthread
 
