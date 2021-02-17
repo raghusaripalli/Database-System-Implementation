@@ -3,3 +3,4 @@ tpch-dbgen/
 .vscode
 main
 *.bin
+*.tmp
