@@ -3,9 +3,9 @@
 
 #include "DBFile.h"
 
-class HeapFile: protected DBFileBase {
+class HeapFile: protected GenericDBFile {
   friend class DBFile;
-  using DBFileBase::GetNext;
+  using GenericDBFile::GetNext;
 protected:
   HeapFile (); 
   ~HeapFile() {}

@@ -3,10 +3,10 @@
 
 #include "DBFile.h"
 
-class HeapFile: protected DBFileBase {
+class HeapFile: public GenericDBFile {
   friend class DBFile;
-  using DBFileBase::GetNext;
-protected:
+  using GenericDBFile::GetNext;
+public:
   HeapFile (); 
   ~HeapFile() {}
 

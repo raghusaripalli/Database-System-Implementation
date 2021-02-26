@@ -4,3 +4,4 @@ tpch-dbgen/
 main
 *.bin
 *.tmp
+tables/

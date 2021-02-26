@@ -40,7 +40,7 @@ void *consumer (void *arg) {
 
 	if (t->write) {
 		sprintf (outfile, "%s.bigq", rel->path ());
-		dbfile.Create (outfile, HEAP, NULL);
+		dbfile.Create (outfile, heap, NULL);
 	}
 
 	int err = 0;

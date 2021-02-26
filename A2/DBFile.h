@@ -9,9 +9,9 @@
 #include "Comparison.h"
 #include "ComparisonEngine.h"
 
-typedef enum {HEAP, SORTED, TREE} fType;
+typedef enum {heap, sorted, btree} fType;
 
-class DBFileBase;
+class GenericDBFile;
 
 class DBFile {
 public:
@@ -30,7 +30,7 @@ public:
   int GetNext (Record& fetchme, CNF& cnf, Record& literal);
 
 private:
-  DBFileBase* db;
+  GenericDBFile* db;
   
   void createFile(fType ftype);
 
@@ -40,11 +40,11 @@ private:
 
 // TODO: empty the current page before starting add.
 // be careful when switching from read mode to write mode, or vice versa (in heap files)
-class DBFileBase {
+class GenericDBFile {
   friend class DBFile;
-protected:
-  DBFileBase(): mode(READ) {}
-  virtual ~DBFileBase() {};
+public:
+  GenericDBFile(): mode(READ) {}
+  virtual ~GenericDBFile() {};
 
   virtual int Create (char* fpath, void* startup);
   virtual int Open (char* fpath);
@@ -76,8 +76,8 @@ protected:
   virtual void startRead() = 0;
 
 private:
-  DBFileBase(const DBFileBase&);
-  DBFileBase& operator=(const DBFileBase&);
+  GenericDBFile(const GenericDBFile&);
+  GenericDBFile& operator=(const GenericDBFile&);
 };
 
 #endif

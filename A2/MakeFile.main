@@ -19,12 +19,13 @@ run: test.out
 	$(RM) *.tmp
 	$(CURDIR)/test.out 6
 
-test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o Pipe.o BigQ.o Function.o DBFile.o HeapFile.o  yyfunc.tab.o lex.yyfunc.o y.tab.o lex.yy.o test.o
+test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o Pipe.o BigQ.o Function.o DBFile.o HeapFile.o SortedFile.o yyfunc.tab.o lex.yyfunc.o y.tab.o lex.yy.o test.o
 	$(CXX) -o $@ $^ $(LDLIBS)
 
 test.o: test.h Pipe.h DBFile.h Record.h Function.h BigQ.h
 DBFile.o: DBFile.h Record.h Schema.h File.h Comparison.h ComparisonEngine.h Errors.h HeapFile.h
 HeapFile.o: HeapFile.h DBFile.h Record.h Schema.h File.h Comparison.h ComparisonEngine.h Defs.h Errors.h
+SortedFile.o: SortedFile.h DBFile.h BigQ.h
 Comparison.o: Comparison.h ComparisonEngine.h File.h Schema.h Record.h Defs.h
 ComparisonEngine.o: ComparisonEngine.h Comparison.h Record.h Schema.h File.h
 Pipe.o: Pipe.h Record.h
