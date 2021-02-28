@@ -9,7 +9,7 @@ using std::string;
 using std::ofstream;
 
 int DBFile::Create (char* fpath, fType ftype, void* startup) {
-  if (fpath == NULL || startup == NULL)
+  if (fpath == NULL)
     return -1;
   FATALIF(db!=NULL, "File already opened.");
   createFile(ftype);

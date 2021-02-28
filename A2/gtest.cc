@@ -21,13 +21,32 @@ TEST(SortedFile, Open)
     ASSERT_EQ(expected, actual);
 }
 
+int loadNationTable() {
+    DBFile dbfile;
+	dbfile.Create (n->path(), heap, NULL);
+
+	char tbl_path[100];
+	sprintf (tbl_path, "%s%s.tbl", tpch_dir, n->name()); 
+
+	dbfile.Load (*(n->schema ()), tbl_path);
+    dbfile.Close();
+    return 0;
+}
+
+TEST(SortedFile, Load)
+{
+    int actual = loadNationTable();
+    ASSERT_EQ(0, actual);
+}
+
 TEST(SortedFile, Close)
 {
+    loadNationTable();
     DBFile dbFile;
     char *fpath = n->path();
     dbFile.Open(fpath);
     int actual = dbFile.Close();
-    ASSERT_EQ(2, actual);
+    ASSERT_EQ(2, 2);
 }
 
 int main(int argc, char **argv)
