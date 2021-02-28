@@ -248,7 +248,7 @@ GTest: CMakeFiles/GTest.dir/SortedFile.cc.o
 GTest: CMakeFiles/GTest.dir/Pipe.cc.o
 GTest: CMakeFiles/GTest.dir/BigQ.cc.o
 GTest: CMakeFiles/GTest.dir/build.make
-GTest: /usr/lib/libgtest.so
+GTest: gtest/libgtest.a
 GTest: CMakeFiles/GTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable GTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GTest.dir/link.txt --verbose=$(VERBOSE)

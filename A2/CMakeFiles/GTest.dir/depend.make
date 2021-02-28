@@ -134,4 +134,23 @@ CMakeFiles/GTest.dir/gtest.cc.o: SortedFile.h
 CMakeFiles/GTest.dir/gtest.cc.o: TwoWayList.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest.cc
 CMakeFiles/GTest.dir/gtest.cc.o: test.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-death-test.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-message.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-param-test.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-printers.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-test-part.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-typed-test.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest_pred_impl.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest_prod.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-death-test-internal.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-filepath.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-internal.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-linked_ptr.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-param-util-generated.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-param-util.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-port.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-string.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-tuple.h
+CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/internal/gtest-type-util.h
 
