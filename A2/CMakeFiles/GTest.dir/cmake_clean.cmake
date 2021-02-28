@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GTest.dir/Pipe.cc.o"
   "CMakeFiles/GTest.dir/Record.cc.o"
   "CMakeFiles/GTest.dir/Schema.cc.o"
+  "CMakeFiles/GTest.dir/SortedFile.cc.o"
   "CMakeFiles/GTest.dir/gtest.cc.o"
   "GTest"
   "GTest.pdb"

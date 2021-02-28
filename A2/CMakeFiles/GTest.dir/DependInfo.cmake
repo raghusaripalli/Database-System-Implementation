@@ -4,16 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/raghusaripalli/Desktop/dbi-master/src/BigQ.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/BigQ.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/Comparison.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/Comparison.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/ComparisonEngine.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/ComparisonEngine.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/DBFile.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/DBFile.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/File.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/File.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/HeapFile.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/HeapFile.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/Pipe.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/Pipe.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/Record.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/Record.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/Schema.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/Schema.cc.o"
-  "/home/raghusaripalli/Desktop/dbi-master/src/gtest.cc" "/home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles/GTest.dir/gtest.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/BigQ.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/BigQ.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/Comparison.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/Comparison.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/ComparisonEngine.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/ComparisonEngine.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/DBFile.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/DBFile.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/File.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/File.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/HeapFile.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/HeapFile.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/Pipe.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/Pipe.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/Record.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/Record.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/Schema.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/Schema.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/SortedFile.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/SortedFile.cc.o"
+  "/home/raghusaripalli/Desktop/DBI/A2/gtest.cc" "/home/raghusaripalli/Desktop/DBI/A2/CMakeFiles/GTest.dir/gtest.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

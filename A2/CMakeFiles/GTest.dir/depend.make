@@ -33,6 +33,7 @@ CMakeFiles/GTest.dir/ComparisonEngine.cc.o: Record.h
 CMakeFiles/GTest.dir/ComparisonEngine.cc.o: Schema.h
 CMakeFiles/GTest.dir/ComparisonEngine.cc.o: TwoWayList.h
 
+CMakeFiles/GTest.dir/DBFile.cc.o: BigQ.h
 CMakeFiles/GTest.dir/DBFile.cc.o: Comparison.h
 CMakeFiles/GTest.dir/DBFile.cc.o: ComparisonEngine.h
 CMakeFiles/GTest.dir/DBFile.cc.o: DBFile.cc
@@ -42,8 +43,10 @@ CMakeFiles/GTest.dir/DBFile.cc.o: Errors.h
 CMakeFiles/GTest.dir/DBFile.cc.o: File.h
 CMakeFiles/GTest.dir/DBFile.cc.o: HeapFile.h
 CMakeFiles/GTest.dir/DBFile.cc.o: ParseTree.h
+CMakeFiles/GTest.dir/DBFile.cc.o: Pipe.h
 CMakeFiles/GTest.dir/DBFile.cc.o: Record.h
 CMakeFiles/GTest.dir/DBFile.cc.o: Schema.h
+CMakeFiles/GTest.dir/DBFile.cc.o: SortedFile.h
 CMakeFiles/GTest.dir/DBFile.cc.o: TwoWayList.h
 
 CMakeFiles/GTest.dir/File.cc.o: Comparison.h
@@ -101,6 +104,22 @@ CMakeFiles/GTest.dir/Schema.cc.o: Schema.cc
 CMakeFiles/GTest.dir/Schema.cc.o: Schema.h
 CMakeFiles/GTest.dir/Schema.cc.o: TwoWayList.h
 
+CMakeFiles/GTest.dir/SortedFile.cc.o: BigQ.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Comparison.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: ComparisonEngine.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: DBFile.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Defs.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Errors.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: File.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: HeapFile.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: ParseTree.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Pipe.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Record.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: Schema.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: SortedFile.cc
+CMakeFiles/GTest.dir/SortedFile.cc.o: SortedFile.h
+CMakeFiles/GTest.dir/SortedFile.cc.o: TwoWayList.h
+
 CMakeFiles/GTest.dir/gtest.cc.o: BigQ.h
 CMakeFiles/GTest.dir/gtest.cc.o: Comparison.h
 CMakeFiles/GTest.dir/gtest.cc.o: ComparisonEngine.h
@@ -111,6 +130,7 @@ CMakeFiles/GTest.dir/gtest.cc.o: ParseTree.h
 CMakeFiles/GTest.dir/gtest.cc.o: Pipe.h
 CMakeFiles/GTest.dir/gtest.cc.o: Record.h
 CMakeFiles/GTest.dir/gtest.cc.o: Schema.h
+CMakeFiles/GTest.dir/gtest.cc.o: SortedFile.h
 CMakeFiles/GTest.dir/gtest.cc.o: TwoWayList.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest.cc
 CMakeFiles/GTest.dir/gtest.cc.o: test.h

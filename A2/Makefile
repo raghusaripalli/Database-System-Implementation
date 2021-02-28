@@ -67,10 +67,10 @@ RM = /home/raghusaripalli/Downloads/cmake/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/raghusaripalli/Desktop/dbi-master/src
+CMAKE_SOURCE_DIR = /home/raghusaripalli/Desktop/DBI/A2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/raghusaripalli/Desktop/dbi-master/src
+CMAKE_BINARY_DIR = /home/raghusaripalli/Desktop/DBI/A2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles /home/raghusaripalli/Desktop/dbi-master/src//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/raghusaripalli/Desktop/DBI/A2/CMakeFiles /home/raghusaripalli/Desktop/DBI/A2//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/raghusaripalli/Desktop/dbi-master/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/raghusaripalli/Desktop/DBI/A2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -385,6 +385,33 @@ Schema.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/Schema.cc.s
 .PHONY : Schema.cc.s
 
+SortedFile.o: SortedFile.cc.o
+
+.PHONY : SortedFile.o
+
+# target to build an object file
+SortedFile.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/SortedFile.cc.o
+.PHONY : SortedFile.cc.o
+
+SortedFile.i: SortedFile.cc.i
+
+.PHONY : SortedFile.i
+
+# target to preprocess a source file
+SortedFile.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/SortedFile.cc.i
+.PHONY : SortedFile.cc.i
+
+SortedFile.s: SortedFile.cc.s
+
+.PHONY : SortedFile.s
+
+# target to generate assembly for a file
+SortedFile.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/SortedFile.cc.s
+.PHONY : SortedFile.cc.s
+
 gtest.o: gtest.cc.o
 
 .PHONY : gtest.o
@@ -448,6 +475,9 @@ help:
 	@echo "... Schema.o"
 	@echo "... Schema.i"
 	@echo "... Schema.s"
+	@echo "... SortedFile.o"
+	@echo "... SortedFile.i"
+	@echo "... SortedFile.s"
 	@echo "... gtest.o"
 	@echo "... gtest.i"
 	@echo "... gtest.s"

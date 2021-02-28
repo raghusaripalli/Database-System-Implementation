@@ -54,7 +54,7 @@ public:
 class File {
 private:
 
-        int myFilDes;
+    int myFilDes;
 	off_t curLength; 
 
 public:
@@ -65,12 +65,14 @@ public:
 	// returns the current length of the file, in pages
 	off_t GetLength () const { return curLength; }
 
-        bool empty() const { return curLength==0; }
-      
-        /**
-         * gets the index of the last page in the file
-         */
-        off_t lastIndex() const { return curLength-2; }
+	bool empty() const { return curLength==0; }
+
+	bool isOpen() const { return myFilDes != 0; }
+	
+	/**
+	 * gets the index of the last page in the file
+	 */
+	off_t lastIndex() const { return curLength-2; }
 
 	// opens the given file; the first parameter tells whether or not to
 	// create the file.  If the parameter is zero, a new file is created
@@ -90,23 +92,23 @@ public:
 	// closes the file and returns the file length (in number of pages)
 	int Close ();
 
-        /**
-         * gets the last page
-         * @param putItHere indicates where to put the last page
-         */
-        void getLastPage(Page* putItHere) {
-          if(empty()) putItHere = NULL;
-          else return GetPage(putItHere, lastIndex());
-        }
+	/**
+	 * gets the last page
+	 * @param putItHere indicates where to put the last page
+	 */
+	void getLastPage(Page* putItHere) {
+		if(empty()) putItHere = NULL;
+		else return GetPage(putItHere, lastIndex());
+	}
 
-        /**
-         * adds one page to the end
-         * @param addMe the page to add
-         */
-        void addPage(Page* addMe) {
-          if(empty()) AddPage(addMe, 0);
-          else AddPage(addMe, lastIndex()+1);
-        }
+	/**
+	 * adds one page to the end
+	 * @param addMe the page to add
+	 */
+	void addPage(Page* addMe) {
+		if(empty()) AddPage(addMe, 0);
+		else AddPage(addMe, lastIndex()+1);
+	}
 };
 
 #endif

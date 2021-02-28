@@ -1,36 +1,38 @@
 #include "gtest/gtest.h"
-#include "BigQ.h"
+#include "SortedFile.h"
 #include "test.h"
 
-
-TEST(BigQ, Initialize) {
-    Pipe in(100), out(100);
-    OrderMaker dummy;
-    BigQ bq(in, out, dummy, 10);
-    ASSERT_EQ(1, 1);
-}
-
-
-TEST(BigQ, SortHelper) {
-    Pipe in(100), out(100);
-    OrderMaker dummy;
-    BigQ bq(in, out, dummy, 10);
-    string rand1 = bq.tmpfName();
-    string rand2 = bq.tmpfName();
-    ASSERT_NE(rand1, rand2);
-}
-
-TEST(BigQ, TestBigQRandomFileFunction) {
-    Pipe in(100), out(100);
-    OrderMaker dummy;
-    BigQ bq(in, out, dummy, 10);
-    void *expected = bq.Working(NULL);
-    void *actual = NULL;
+TEST(SortedFile, Create)
+{
+    DBFile dbFile;
+    void *startup = NULL;
+    char *fpath = NULL;
+    int actual = dbFile.Create(fpath, sorted, startup);
+    int expected = -1;
     ASSERT_EQ(expected, actual);
 }
 
-int main(int argc, char** argv)
+TEST(SortedFile, Open)
+{
+    DBFile dbFile;
+    char *fpath = NULL;
+    int actual = dbFile.Open(fpath);
+    int expected = -1;
+    ASSERT_EQ(expected, actual);
+}
+
+TEST(SortedFile, Close)
+{
+    DBFile dbFile;
+    char *fpath = n->path();
+    dbFile.Open(fpath);
+    int actual = dbFile.Close();
+    ASSERT_EQ(2, actual);
+}
+
+int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
+    setup();
     return RUN_ALL_TESTS();
 }
