@@ -8,6 +8,12 @@
 #include "BigQ.h"
 #include "Defs.h"
 
+#define safeDelete(p) \
+  {                   \
+    delete p;         \
+    p = NULL;         \
+  }
+
 class SortedFile : protected GenericDBFile
 {
   static const size_t PIPE_BUFFER_SIZE = PIPE_SIZE;
@@ -55,6 +61,9 @@ private:
   void allocMem();
   void freeMem();
   void assignTable(char *fPath);
+  void createHelper(char *fpath, void *startup);
+  void openHelper(char *fpath);
+  void closeHelper();
 
   void createQ()
   {

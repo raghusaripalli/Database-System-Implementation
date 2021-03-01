@@ -13,7 +13,7 @@ using namespace std;
 // make sure that the information below is correct
 
 char *catalog_path = "catalog"; 
-char *dbfile_dir = ""; 
+char *dbfile_dir = "binFiles/"; 
 char *tpch_dir ="tables/"; 
 
 

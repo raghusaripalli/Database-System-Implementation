@@ -1,15 +1,8 @@
 #include <fstream>
 #include <stdio.h>
-
 #include "Errors.h"
 #include "SortedFile.h"
 #include "HeapFile.h"
-
-#define safeDelete(p) \
-  {                   \
-    delete p;         \
-    p = NULL;         \
-  }
 
 using std::ifstream;
 using std::ofstream;
@@ -25,14 +18,7 @@ int SortedFile::Create(char *fpath, void *startup)
     return -1;
 
   assignTable(fpath);
-  typedef struct
-  {
-    OrderMaker *o;
-    int l;
-  } * pOrder;
-  pOrder po = (pOrder)startup;
-  myOrder = po->o;
-  runLength = po->l;
+  createHelper(fpath, startup);
   return GenericDBFile::Create(fpath, startup);
 }
 
@@ -40,25 +26,17 @@ int SortedFile::Open(char *fpath)
 {
   if (fpath == NULL)
     return -1;
-  
+
   allocMem();
   assignTable(fpath);
 
-  int ftype;
-  ifstream ifs(metafName());
-  FATALIF(!ifs, "Meta file missing.");
-  ifs >> ftype >> *myOrder >> runLength;
-  ifs.close();
+  openHelper(fpath);
   return GenericDBFile::Open(fpath);
 }
 
 int SortedFile::Close()
-{ 
-  ofstream ofs(metafName());
-  ofs << "1\n"
-      << *myOrder << '\n'
-      << runLength << std::endl;
-  ofs.close();
+{
+  closeHelper();
   if (mode == WRITE)
     merge();
   freeMem();
@@ -94,15 +72,15 @@ int SortedFile::GetNext(Record &fetchme, CNF &cnf, Record &literal)
   OrderMaker::queryOrderMaker(*myOrder, cnf, queryorder, cnforder);
   ComparisonEngine cmp;
   if (!binarySearch(fetchme, queryorder, literal, cnforder, cmp))
-    return 0; // query part should equal
+    return 0;
   do
   {
     if (cmp.Compare(&fetchme, &queryorder, &literal, &cnforder))
-      return 0; // query part should equal
+      return 0;
     if (cmp.Compare(&fetchme, &literal, &cnf))
-      return 1; // matched
+      return 1;
   } while (GetNext(fetchme));
-  return 0; // no matching records
+  return 0;
 }
 
 void SortedFile::merge()
@@ -115,14 +93,12 @@ void SortedFile::merge()
   tmp.Create(const_cast<char *>(tmpfName()), NULL);
   ComparisonEngine ce;
 
-  // initialize
   if (fileNotEmpty)
   {
     theFile.GetPage(&curPage, curPageIdx = 0);
     fileNotEmpty = GetNext(fromFile);
   }
 
-  // two-way merge
   while (fileNotEmpty || pipeNotEmpty)
     if (!fileNotEmpty || (pipeNotEmpty && ce.Compare(&fromFile, &fromPipe, myOrder) > 0))
     {
@@ -135,11 +111,10 @@ void SortedFile::merge()
       fileNotEmpty = GetNext(fromFile);
     }
     else
-      FATAL("Two-way merge failed.");
+      FATAL("Pipe and File Both might be empty. Two-way merge failed.");
 
-  // write back
   tmp.Close();
-  FATALIF(rename(tmpfName(), tpath.c_str()), "Merge write failed."); // rename returns 0 on success
+  FATALIF(rename(tmpfName(), tpath.c_str()), "TempfName write failed. Merge write failed.");
   deleteQ();
 }
 
@@ -200,4 +175,34 @@ void SortedFile::freeMem()
   if (useMem)
     safeDelete(myOrder);
   useMem = false;
+}
+
+void SortedFile::createHelper(char *fpath, void *startup)
+{
+  typedef struct
+  {
+    OrderMaker *o;
+    int l;
+  } * pOrder;
+  pOrder po = (pOrder)startup;
+  myOrder = po->o;
+  runLength = po->l;
+}
+
+void SortedFile::openHelper(char *fpath)
+{
+  int ftype;
+  ifstream ifs(metafName());
+  FATALIF(!ifs, "Meta file missing.");
+  ifs >> ftype >> *myOrder >> runLength;
+  ifs.close();
+}
+
+void SortedFile::closeHelper()
+{
+  ofstream ofs(metafName());
+  ofs << "1\n"
+      << *myOrder << '\n'
+      << runLength << std::endl;
+  ofs.close();
 }
