@@ -60,6 +60,18 @@ CMakeFiles/GTest.dir/File.cc.o: Schema.h
 CMakeFiles/GTest.dir/File.cc.o: TwoWayList.cc
 CMakeFiles/GTest.dir/File.cc.o: TwoWayList.h
 
+CMakeFiles/GTest.dir/Function.cc.o: Comparison.h
+CMakeFiles/GTest.dir/Function.cc.o: ComparisonEngine.h
+CMakeFiles/GTest.dir/Function.cc.o: Defs.h
+CMakeFiles/GTest.dir/Function.cc.o: File.h
+CMakeFiles/GTest.dir/Function.cc.o: Function.cc
+CMakeFiles/GTest.dir/Function.cc.o: Function.h
+CMakeFiles/GTest.dir/Function.cc.o: ParseFunc.h
+CMakeFiles/GTest.dir/Function.cc.o: ParseTree.h
+CMakeFiles/GTest.dir/Function.cc.o: Record.h
+CMakeFiles/GTest.dir/Function.cc.o: Schema.h
+CMakeFiles/GTest.dir/Function.cc.o: TwoWayList.h
+
 CMakeFiles/GTest.dir/HeapFile.cc.o: Comparison.h
 CMakeFiles/GTest.dir/HeapFile.cc.o: ComparisonEngine.h
 CMakeFiles/GTest.dir/HeapFile.cc.o: DBFile.h
@@ -94,6 +106,25 @@ CMakeFiles/GTest.dir/Record.cc.o: Record.h
 CMakeFiles/GTest.dir/Record.cc.o: Schema.h
 CMakeFiles/GTest.dir/Record.cc.o: TwoWayList.h
 
+CMakeFiles/GTest.dir/RelOp.cc.o: BigQ.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Comparison.h
+CMakeFiles/GTest.dir/RelOp.cc.o: ComparisonEngine.h
+CMakeFiles/GTest.dir/RelOp.cc.o: DBFile.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Defs.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Errors.h
+CMakeFiles/GTest.dir/RelOp.cc.o: File.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Function.h
+CMakeFiles/GTest.dir/RelOp.cc.o: HeapFile.h
+CMakeFiles/GTest.dir/RelOp.cc.o: ParseFunc.h
+CMakeFiles/GTest.dir/RelOp.cc.o: ParseTree.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Pipe.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Pthreadutil.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Record.h
+CMakeFiles/GTest.dir/RelOp.cc.o: RelOp.cc
+CMakeFiles/GTest.dir/RelOp.cc.o: RelOp.h
+CMakeFiles/GTest.dir/RelOp.cc.o: Schema.h
+CMakeFiles/GTest.dir/RelOp.cc.o: TwoWayList.h
+
 CMakeFiles/GTest.dir/Schema.cc.o: Comparison.h
 CMakeFiles/GTest.dir/Schema.cc.o: ComparisonEngine.h
 CMakeFiles/GTest.dir/Schema.cc.o: Defs.h
@@ -126,14 +157,18 @@ CMakeFiles/GTest.dir/gtest.cc.o: ComparisonEngine.h
 CMakeFiles/GTest.dir/gtest.cc.o: DBFile.h
 CMakeFiles/GTest.dir/gtest.cc.o: Defs.h
 CMakeFiles/GTest.dir/gtest.cc.o: File.h
+CMakeFiles/GTest.dir/gtest.cc.o: Function.h
+CMakeFiles/GTest.dir/gtest.cc.o: ParseFunc.h
 CMakeFiles/GTest.dir/gtest.cc.o: ParseTree.h
 CMakeFiles/GTest.dir/gtest.cc.o: Pipe.h
+CMakeFiles/GTest.dir/gtest.cc.o: Pthreadutil.h
 CMakeFiles/GTest.dir/gtest.cc.o: Record.h
+CMakeFiles/GTest.dir/gtest.cc.o: RelOp.h
 CMakeFiles/GTest.dir/gtest.cc.o: Schema.h
 CMakeFiles/GTest.dir/gtest.cc.o: SortedFile.h
 CMakeFiles/GTest.dir/gtest.cc.o: TwoWayList.h
+CMakeFiles/GTest.dir/gtest.cc.o: a2test.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest.cc
-CMakeFiles/GTest.dir/gtest.cc.o: test.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-death-test.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-message.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest/include/gtest/gtest-param-test.h

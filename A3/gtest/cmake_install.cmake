@@ -1,4 +1,4 @@
-# Install script for directory: /home/raghusaripalli/Desktop/DBI/A2/gtest
+# Install script for directory: /home/raghusaripalli/Desktop/DBI/A3/gtest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

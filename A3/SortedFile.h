@@ -51,7 +51,7 @@ private:
   Pipe *in, *out;
   BigQ *biq;
 
-  const char *metafName() const;
+  const char *metafName();
   inline const char *tmpfName() const;
 
   void merge();

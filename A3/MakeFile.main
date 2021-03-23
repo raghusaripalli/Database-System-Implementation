@@ -8,7 +8,7 @@ endif
 
 .PHONY: all
 all: CXXFLAGS += -O2
-all: test.out
+all: test.out  a1test.out a2test.out
 
 .PHONY: debug
 debug: CXXFLAGS += -g -Wno-deprecated
@@ -18,7 +18,15 @@ debug: clean test.out
 test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o Pipe.o BigQ.o RelOp.o Function.o DBFile.o HeapFile.o SortedFile.o yyfunc.tab.o lex.yyfunc.o y.tab.o lex.yy.o test.o
 	$(CXX) -o $@ $^ $(LDLIBS)
 
+a1test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o Pipe.o BigQ.o RelOp.o Function.o DBFile.o HeapFile.o SortedFile.o yyfunc.tab.o lex.yyfunc.o y.tab.o lex.yy.o a1test.o
+	$(CXX) -o $@ $^ $(LDLIBS)
+
+a2test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o Pipe.o BigQ.o Function.o DBFile.o HeapFile.o SortedFile.o yyfunc.tab.o lex.yyfunc.o y.tab.o lex.yy.o a2test.o
+	$(CXX) -o $@ $^ $(LDLIBS)
+
 test.o: test.h Pipe.h DBFile.h Record.h Function.h BigQ.h RelOp.h
+a2test.o: a2test.h Pipe.h DBFile.h Record.h Function.h BigQ.h
+a1test.o: a1test.h Pipe.h DBFile.h Record.h Function.h BigQ.h RelOp.h
 DBFile.o: DBFile.h Record.h Schema.h File.h Comparison.h ComparisonEngine.h Errors.h HeapFile.h
 HeapFile.o: HeapFile.h DBFile.h Record.h Schema.h File.h Comparison.h ComparisonEngine.h Defs.h Errors.h
 SortedFile.o: SortedFile.h DBFile.h BigQ.h

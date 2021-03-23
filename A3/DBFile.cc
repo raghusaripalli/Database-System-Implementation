@@ -4,6 +4,7 @@
 #include "DBFile.h"
 #include "HeapFile.h"
 #include "SortedFile.h"
+#include <string.h>
 
 using std::string;
 using std::ofstream;
@@ -20,7 +21,7 @@ int DBFile::Open (char* fpath) {
   if (fpath == NULL)
     return -1;
   FATALIF(db!=NULL, "File already opened.");
-  int ftype = heap;  // use heap file by default
+  int ftype = heap;
   ifstream ifs((GenericDBFile::getTableName(fpath)+".meta").c_str());
   if (ifs) {
     ifs >> ftype;

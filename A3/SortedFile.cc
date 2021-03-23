@@ -152,8 +152,7 @@ int SortedFile::binarySearch(Record &fetchme, OrderMaker &queryorder, Record &li
   return result == 0;
 }
 
-const char *SortedFile::metafName() const
-{
+const char *SortedFile::metafName() {
   std::string p(dbfile_dir);
   return (p + table + ".meta").c_str();
 }
