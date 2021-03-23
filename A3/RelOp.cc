@@ -106,7 +106,7 @@ void Join::sortMergeJoin(Pipe* pleft, OrderMaker* orderLeft, Pipe* pright, Order
       FATALIF(!buffer.add(previous), "Join buffer exhausted.");     // remember the last one
       do {       // Join records from right pipe
         FOREACH(rec, buffer.buffer, buffer.nrecords)
-          if (cmp.Compare(&rec, &fromRight, literal, sel)) {   // actural join
+          if (cmp.Compare(&rec, &fromRight, literal, sel)) {   // actual join
             merged.CrossProduct(&rec, &fromRight);
             pout->Insert(&merged);
           }
