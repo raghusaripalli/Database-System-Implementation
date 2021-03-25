@@ -2,36 +2,42 @@
 #include "SortedFile.h"
 #include "RelOp.h"
 #include "a2test.h"
+#define EXPECTED 0
 
 
 TEST(RelationalOp, create_joinable_thread)
 {
-    for (int i = 0 ; i < 100000; i++);
-    ASSERT_EQ(0, 0);
+    Project project;
+    int actual = project.test();
+    ASSERT_EQ(EXPECTED, actual);
 }
 
 TEST(GroupBy, Run)
 {
-    for (int i = 0 ; i < 1000000; i++);
-    ASSERT_EQ(0, 0);
+    GroupBy groupBy;
+    int actual = groupBy.test();
+    ASSERT_EQ(EXPECTED, actual);
 }
 
 TEST(SelectFile, Work)
 {
-    for (int i = 0 ; i < 100000; i++);
-    ASSERT_EQ(0, 0);
+    SelectFile selectFile;
+    int actual = selectFile.test();
+    ASSERT_EQ(EXPECTED, actual);
 }
 
 TEST(DuplicateRemoval, Work)
 {
-    for (int i = 0 ; i < 100000; i++);
-    ASSERT_EQ(0, 0);
+    DuplicateRemoval duplicateRemoval;
+    int actual = duplicateRemoval.test();
+    ASSERT_EQ(EXPECTED, actual);
 }
 
 TEST(Join, sortMergeJoin)
 {
-    for (int i = 0 ; i < 10000000; i++);
-    ASSERT_EQ(0, 0);
+    Join join;
+    int actual = join.test();
+    ASSERT_EQ(EXPECTED, actual);
 }
 
 int main(int argc, char **argv)

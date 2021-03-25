@@ -79,12 +79,12 @@ void Join::Run(Pipe& inPipeL, Pipe& inPipeR, Pipe& outPipe, CNF& selOp, Record& 
 void* Join::work(void* param) {
   UNPACK_ARGS6(Args, param, pleft, pright, pout, sel, lit, runLen);
   OrderMaker orderLeft, orderRight;
-  if (sel->GetSortOrders(orderLeft, orderRight)) 
+  if (sel->GetSortOrders(orderLeft, orderRight))
     sortMergeJoin(pleft, &orderLeft, pright, &orderRight, pout, sel, lit, runLen);
   else nestedLoopJoin(pleft, pright, pout, sel, lit, runLen);
   pout->ShutDown();
 }
-  
+
 void Join::sortMergeJoin(Pipe* pleft, OrderMaker* orderLeft, Pipe* pright, OrderMaker* orderRight, Pipe* pout,
                           CNF* sel, Record* literal, size_t runLen) {
   ComparisonEngine cmp;
@@ -93,20 +93,19 @@ void Join::sortMergeJoin(Pipe* pleft, OrderMaker* orderLeft, Pipe* pright, Order
   Record fromLeft, fromRight, merged, previous;
   JoinBuffer buffer(runLen);
 
-  // two-way merge join
   for (bool moreLeft = sortedLeft.Remove(&fromLeft), moreRight = sortedRight.Remove(&fromRight); moreLeft && moreRight; ) {
     int result = cmp.Compare(&fromLeft, orderLeft, &fromRight, orderRight);
     if (result<0) moreLeft = sortedLeft.Remove(&fromLeft);
     else if (result>0) moreRight = sortedRight.Remove(&fromRight);
-    else {       // equal attributes: fromLeft == fromRight ==> do joining
+    else {
       buffer.clear();
       for(previous.Consume(&fromLeft);
           (moreLeft=sortedLeft.Remove(&fromLeft)) && cmp.Compare(&previous, &fromLeft, orderLeft)==0; previous.Consume(&fromLeft))
-        FATALIF(!buffer.add(previous), "Join buffer exhausted.");   // gather records of the same value
-      FATALIF(!buffer.add(previous), "Join buffer exhausted.");     // remember the last one
-      do {       // Join records from right pipe
+        FATALIF(!buffer.add(previous), "Join buffer exhausted.");
+      FATALIF(!buffer.add(previous), "Join buffer exhausted.");
+      do {
         FOREACH(rec, buffer.buffer, buffer.nrecords)
-          if (cmp.Compare(&rec, &fromRight, literal, sel)) {   // actual join
+          if (cmp.Compare(&rec, &fromRight, literal, sel)) {
             merged.CrossProduct(&rec, &fromRight);
             pout->Insert(&merged);
           }
@@ -121,14 +120,13 @@ void Join::nestedLoopJoin(Pipe* pleft, Pipe* pright, Pipe* pout, CNF* sel, Recor
   dumpFile(*pright, rightFile);
   JoinBuffer leftBuffer(runLen);
 
-  // nested loops join
   FOREACH_INPIPE(rec, pleft)
-    if (!leftBuffer.add(rec)) {  // buffer full ==> do join
+    if (!leftBuffer.add(rec)) {
       joinBuf(leftBuffer, rightFile, *pout, *literal, *sel);
-      leftBuffer.clear();       // start next chunk of LEFT
+      leftBuffer.clear();
       leftBuffer.add(rec);
     }
-  joinBuf(leftBuffer, rightFile, *pout, *literal, *sel);   // join the last buffer
+  joinBuf(leftBuffer, rightFile, *pout, *literal, *sel);
   rightFile.Close();
 }
 
@@ -138,7 +136,7 @@ void Join::joinBuf(JoinBuffer& buffer, DBFile& file, Pipe& out, Record& literal,
 
   FOREACH_INFILE(fromFile, file) {
     FOREACH(fromBuffer, buffer.buffer, buffer.nrecords)
-      if (cmp.Compare(&fromBuffer, &fromFile, &literal, &selOp)) {   // actural join
+      if (cmp.Compare(&fromBuffer, &fromFile, &literal, &selOp)) {
         merged.CrossProduct(&fromBuffer, &fromFile);
         out.Insert(&merged);
       }
@@ -149,7 +147,7 @@ void Join::joinBuf(JoinBuffer& buffer, DBFile& file, Pipe& out, Record& literal,
 void Join::dumpFile(Pipe& in, DBFile& out) {
   const int RLEN = 10;
   char rstr[RLEN];
-  Rstring::gen(rstr, RLEN);  // need a random name otherwise two or more joins would crash
+  Rstring::gen(rstr, RLEN);
   std::string tmpName("join");
   tmpName = tmpName + rstr + ".tmp";
   out.Create((char*)tmpName.c_str(), heap, NULL);
@@ -170,13 +168,13 @@ void* DuplicateRemoval::work(void* param) {
   Record cur, next;
   ComparisonEngine cmp;
 
-  if(sorted.Remove(&cur)) {  // cur holds the current group
+  if(sorted.Remove(&cur)) {
     while(sorted.Remove(&next))
       if(cmp.Compare(&cur, &next, &sortOrder)) {
         out->Insert(&cur);
         cur.Consume(&next);
       }
-    out->Insert(&cur);   // inserts the last group
+    out->Insert(&cur);
   }
   out->ShutDown();
 }
@@ -207,8 +205,7 @@ void RelationalOp::WaitUntilDone() {
   FATALIF(pthread_join (worker, NULL), "joining threads failed."); 
 }
 
-int RelationalOp::create_joinable_thread(pthread_t *thread,
-                                         void *(*start_routine) (void *), void *arg) {
+int RelationalOp::create_joinable_thread(pthread_t *thread, void *(*start_routine) (void *), void *arg) {
   pthread_attr_t attr;
   pthread_attr_init(&attr);
   pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);

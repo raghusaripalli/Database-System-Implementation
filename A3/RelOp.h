@@ -29,6 +29,10 @@ class SelectFile: public RelationalOp {
 public:
   void Run (DBFile& inFile, Pipe& outPipe, CNF& selOp, Record& literal);
   void Use_n_Pages (int n) {}
+  int test() {
+    for (int i = 0 ; i < 1000000; i++);
+    return 0;
+  }
 
 private:
   MAKE_STRUCT4(Args, DBFile*, Pipe*, CNF*, Record*);
@@ -50,6 +54,10 @@ class Project: public RelationalOp {
 public:
   void Run (Pipe& inPipe, Pipe& outPipe, int* keepMe, int numAttsInput, int numAttsOutput);
   void Use_n_Pages (int n) {}
+  int test() {
+    for (int i = 0 ; i < 1000000; i++);
+    return 0;
+  }
 
 private:
   MAKE_STRUCT5(Args, Pipe*, Pipe*, int*, int, int);
@@ -80,6 +88,10 @@ class JoinBuffer;
 class Join: public SortBasedOp { 
 public:
   void Run (Pipe &inPipeL, Pipe &inPipeR, Pipe &outPipe, CNF &selOp, Record &literal);
+  int test() {
+    for (int i = 0 ; i < 1000000; i++);
+    return 0;
+  }
 
 private:
   MAKE_STRUCT6(Args, Pipe*, Pipe*, Pipe*, CNF*, Record*, size_t);
@@ -107,6 +119,10 @@ class JoinBuffer {
 class DuplicateRemoval: public SortBasedOp {
 public:
   void Run (Pipe& inPipe, Pipe& outPipe, Schema& mySchema);
+  int test() {
+    for (int i = 0 ; i < 1000000; i++);
+    return 0;
+  }
 
 private:
   MAKE_STRUCT4(Args, Pipe*, Pipe*, Schema*, size_t);
@@ -116,6 +132,10 @@ private:
 class GroupBy: public SortBasedOp {
 public:
   void Run (Pipe& inPipe, Pipe& outPipe, OrderMaker& groupAtts, Function& computeMe);
+  int test() {
+    for (int i = 0 ; i < 1000000; i++);
+    return 0;
+  }
 
 private:
   MAKE_STRUCT5(Args, Pipe*, Pipe*, OrderMaker*, Function*, size_t);

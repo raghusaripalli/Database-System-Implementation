@@ -66,6 +66,14 @@ ComparisonEngine.h
 cstdlib
 -
 
+/home/raghusaripalli/Desktop/DBI/A3/Errors.h
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+
 /home/raghusaripalli/Desktop/DBI/A3/File.h
 TwoWayList.h
 /home/raghusaripalli/Desktop/DBI/A3/TwoWayList.h
@@ -83,6 +91,10 @@ Record.h
 /home/raghusaripalli/Desktop/DBI/A3/Record.h
 ParseFunc.h
 /home/raghusaripalli/Desktop/DBI/A3/ParseFunc.h
+
+/home/raghusaripalli/Desktop/DBI/A3/HeapFile.h
+DBFile.h
+/home/raghusaripalli/Desktop/DBI/A3/DBFile.h
 
 /home/raghusaripalli/Desktop/DBI/A3/ParseFunc.h
 
@@ -119,6 +131,22 @@ Comparison.h
 /home/raghusaripalli/Desktop/DBI/A3/Comparison.h
 ComparisonEngine.h
 /home/raghusaripalli/Desktop/DBI/A3/ComparisonEngine.h
+
+/home/raghusaripalli/Desktop/DBI/A3/RelOp.cc
+stdio.h
+-
+iostream
+-
+cstdlib
+-
+RelOp.h
+/home/raghusaripalli/Desktop/DBI/A3/RelOp.h
+Record.h
+/home/raghusaripalli/Desktop/DBI/A3/Record.h
+Errors.h
+/home/raghusaripalli/Desktop/DBI/A3/Errors.h
+HeapFile.h
+/home/raghusaripalli/Desktop/DBI/A3/HeapFile.h
 
 /home/raghusaripalli/Desktop/DBI/A3/RelOp.h
 pthread.h
