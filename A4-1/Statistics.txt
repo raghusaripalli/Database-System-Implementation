@@ -1,0 +1,1 @@
+2 lineitem 6001215 3 l_shipmode 2 l_shipinstruct 1 l_partkey 200000 part 200000 2 p_container 2 p_partkey 200000 1 part#lineitem# 21432.9 
