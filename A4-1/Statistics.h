@@ -66,6 +66,7 @@ class Statistics
 		}
 		return true;
 	}
+	
 	bool checkAtt(struct Operand *left, double &t, char **relNames, int numToJoin){
 	string operand(left->value);
 	if(left->code == 4){
@@ -85,6 +86,11 @@ class Statistics
 	}
 	return true;
 }
+public:
+	int test() {for (int i = 0 ; i < 100000; i++); return 0;}
+	int testAddRel () {return test();}
+	int testAddAttr() {return test();}
+	int testParseRelation() { return test();}
 public:
 	Statistics();
 	Statistics(Statistics &copyMe);	 // Performs deep copy

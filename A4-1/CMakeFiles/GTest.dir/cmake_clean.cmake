@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/GTest.dir/RelOp.cc.o"
   "CMakeFiles/GTest.dir/Schema.cc.o"
   "CMakeFiles/GTest.dir/SortedFile.cc.o"
+  "CMakeFiles/GTest.dir/Statistics.cc.o"
   "CMakeFiles/GTest.dir/gtest.cc.o"
   "GTest"
   "GTest.pdb"

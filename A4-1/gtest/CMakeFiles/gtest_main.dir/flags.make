@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/raghusaripalli/Desktop/DBI/A3/gtest/include -I/home/raghusaripalli/Desktop/DBI/A3/gtest
+CXX_INCLUDES = -I/home/raghusaripalli/Desktop/DBI/A4-1/gtest/include -I/home/raghusaripalli/Desktop/DBI/A4-1/gtest
 
-CXX_FLAGS =  -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+CXX_FLAGS =  -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++11
 

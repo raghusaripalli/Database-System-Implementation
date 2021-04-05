@@ -1,42 +1,29 @@
 #include "gtest/gtest.h"
 #include "SortedFile.h"
 #include "RelOp.h"
+#include "Statistics.h"
 #include "a2test.h"
 #define EXPECTED 0
 
 
-TEST(RelationalOp, create_joinable_thread)
+TEST(Statistics, ParseRelation)
 {
-    Project project;
-    int actual = project.test();
+    Statistics statistics;
+    int actual = statistics.testParseRelation();
     ASSERT_EQ(EXPECTED, actual);
 }
 
-TEST(GroupBy, Run)
+TEST(Statistics, AddRel)
 {
-    GroupBy groupBy;
-    int actual = groupBy.test();
+    Statistics statistics;
+    int actual = statistics.testAddRel();
     ASSERT_EQ(EXPECTED, actual);
 }
 
-TEST(SelectFile, Work)
+TEST(Statistics, AddAttr)
 {
-    SelectFile selectFile;
-    int actual = selectFile.test();
-    ASSERT_EQ(EXPECTED, actual);
-}
-
-TEST(DuplicateRemoval, Work)
-{
-    DuplicateRemoval duplicateRemoval;
-    int actual = duplicateRemoval.test();
-    ASSERT_EQ(EXPECTED, actual);
-}
-
-TEST(Join, sortMergeJoin)
-{
-    Join join;
-    int actual = join.test();
+    Statistics statistics;
+    int actual = statistics.testAddAttr();
     ASSERT_EQ(EXPECTED, actual);
 }
 

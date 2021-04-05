@@ -151,6 +151,11 @@ CMakeFiles/GTest.dir/SortedFile.cc.o: SortedFile.cc
 CMakeFiles/GTest.dir/SortedFile.cc.o: SortedFile.h
 CMakeFiles/GTest.dir/SortedFile.cc.o: TwoWayList.h
 
+CMakeFiles/GTest.dir/Statistics.cc.o: Helper.h
+CMakeFiles/GTest.dir/Statistics.cc.o: ParseTree.h
+CMakeFiles/GTest.dir/Statistics.cc.o: Statistics.cc
+CMakeFiles/GTest.dir/Statistics.cc.o: Statistics.h
+
 CMakeFiles/GTest.dir/gtest.cc.o: BigQ.h
 CMakeFiles/GTest.dir/gtest.cc.o: Comparison.h
 CMakeFiles/GTest.dir/gtest.cc.o: ComparisonEngine.h
@@ -166,6 +171,7 @@ CMakeFiles/GTest.dir/gtest.cc.o: Record.h
 CMakeFiles/GTest.dir/gtest.cc.o: RelOp.h
 CMakeFiles/GTest.dir/gtest.cc.o: Schema.h
 CMakeFiles/GTest.dir/gtest.cc.o: SortedFile.h
+CMakeFiles/GTest.dir/gtest.cc.o: Statistics.h
 CMakeFiles/GTest.dir/gtest.cc.o: TwoWayList.h
 CMakeFiles/GTest.dir/gtest.cc.o: a2test.h
 CMakeFiles/GTest.dir/gtest.cc.o: gtest.cc
