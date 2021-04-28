@@ -1,0 +1,12 @@
+
+SET OUTPUT STDOUT;
+
+CREATE TABLE sql1 (id INTEGER, name STRING) AS HEAP;
+
+INSERT 'data.txt' INTO sql1;
+
+DROP TABLE sql1;
+
+CREATE TABLE sql1 (id INTEGER, name STRING) AS SORTED ON id,name;
+
+DROP TABLE sql1;
